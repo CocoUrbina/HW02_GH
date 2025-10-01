@@ -1,4 +1,6 @@
-# Welcome to MkDocs
+# Tarea 02
+# Cuadratura Guassiana
+# Edwin Urbina Quiroz | A76588
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
