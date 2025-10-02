@@ -296,6 +296,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#paso-3-evaluacion-de-la-funcion-con-n-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 3: Evaluacion de la funcion con \( N = 2 \).
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -357,6 +366,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#paso-3-evaluacion-de-la-funcion-con-n-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 3: Evaluacion de la funcion con \( N = 2 \).
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -382,8 +400,14 @@ print(n2)
 (array([-0.57735027,  0.57735027]), array([1., 1.]))
 </code></pre>
 <h2 id="paso-2-escalado-al-intervalo-de-interes-1-3">Paso 2: Escalado al intervalo de interes <span class="arithmatex">\( [1, 3]\)</span></h2>
-<pre><code class="language-python">gaussxwab(1.0, 3.0, n2[0], n2[1])
+<pre><code class="language-python">escalado_n2 = gaussxwab(1.0, 3.0, n2[0], n2[1])
+print(escalado_n2)
 (array([1.42264973, 2.57735027]), array([1., 1.]))
+</code></pre>
+<h2 id="paso-3-evaluacion-de-la-funcion-con-n-2">Paso 3: Evaluacion de la funcion con <span class="arithmatex">\( N = 2 \)</span>.</h2>
+<pre><code class="language-python">Int_n2 = np.sum(escalado_n2[1] * integrando(escalado_n2[0]))
+print(Int_n2)
+306.8199344959197
 </code></pre>
 
 
