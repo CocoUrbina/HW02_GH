@@ -9,13 +9,13 @@ theme:
     - tutorials.md
     - reference.md
 
-  plugins:
-    - mkdocstrings
+plugins:
+  - mkdocstrings
 
-  markdown_extensions:
-    - pymdownx.arithmatex:
+markdown_extensions:
+  - pymdownx.arithmatex:
       generic: true
 
-  extra_javascript:
-    - javascripts/mathjax.js
-    - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js

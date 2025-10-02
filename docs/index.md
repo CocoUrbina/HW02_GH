@@ -1,19 +1,27 @@
-# Tarea 02
-# Cuadratura Guassiana
-# Edwin Urbina Quiroz | A76588
+# Introduccion
+Tarea02 - Fisica Computacional
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Cuadratura Guassiana
 
-## Commands
+Edwin Urbina Quiroz | A76588
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+
+## Introduccion al problema
+
+\[
+f(x)
+\]
+
+Esto es  \( f(x) \) en linea.
 
 ## Project layout
 
     mkdocs.yml    # The configuration file.
     docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+        index.md  # The introduction to the problem to be solved.
+        explanation.md # The description of the method used to solve the problem.
+        reference.md # The documentation of the functions.
+        tutorials.md # example of use
+    GuassCuadrature/
+        cuadrature.py
+    
