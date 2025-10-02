@@ -391,7 +391,7 @@
 
     <div class="doc doc-contents ">
 
-        <p>Retorna los puntos de muestro x_k y sus respectivos pesos w_k para el polinomio de Legendre de orden N</p>
+        <p>Retorna los puntos de muestro x_k y sus respectivos pesos w_k para el polinomio de Legendre de orden N en el intervalo [-1, 1]</p>
 
 
 <p><span class="doc-section-title">Examples:</span></p>
@@ -441,11 +441,22 @@
       </thead>
       <tbody>
           <tr class="doc-section-item">
-<td><code>array</code></td>            <td>
+<td><code>x</code></td>            <td>
+                  <code><span title="array">array</span></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Retorna los puntos de muestro y sus respectivos pesos para <code>P_N (x)</code></p>
+                <p>retorna los puntos de muestro x_k para <code>P_N (x)</code></p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+<td><code>w</code></td>            <td>
+                  <code><span title="array">array</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>retorna los pesos w_k para <code>P_N (x)</code></p>
               </div>
             </td>
           </tr>
@@ -472,8 +483,9 @@
 <span class="normal">21</span>
 <span class="normal">22</span>
 <span class="normal">23</span>
-<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">gaussxw</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Retorna los puntos de muestro x_k y sus respectivos pesos w_k para el polinomio de Legendre de orden N</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">gaussxw</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Retorna los puntos de muestro x_k y sus respectivos pesos w_k para el polinomio de Legendre de orden N en el intervalo [-1, 1]</span>
 
 <span class="sd">    Examples:</span>
 <span class="sd">        &gt;&gt;&gt; gaussxw(2)</span>
@@ -483,7 +495,8 @@
 <span class="sd">        N (int): Argumento unico. Indica el orden del Polinomio de Legendre.</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        array: Retorna los puntos de muestro y sus respectivos pesos para `P_N (x)`</span>
+<span class="sd">        x (array): retorna los puntos de muestro x_k para `P_N (x)`</span>
+<span class="sd">        w (array): retorna los pesos w_k para `P_N (x)`</span>
 
 
 <span class="sd">    &quot;&quot;&quot;</span>
