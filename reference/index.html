@@ -464,15 +464,12 @@
             </td>
             <td>
               <div class="doc-md-description">
-                <p>tupla con dos <code>numpy.ndarray</code>: x y w</p>
+                <p>Tupla con dos <code>numpy.ndarray</code>: x(puntos d muestreo x_k) y w (pesos w_k)</p>
               </div>
             </td>
           </tr>
       </tbody>
     </table>
-        <pre><code>x (numpy.ndarray): retorna los puntos de muestro x_k para `P_N (x)`
-w (numpy.ndarray): retorna los pesos w_k para `P_N (x)`
-</code></pre>
 
 
             <details class="quote">
@@ -493,10 +490,7 @@ w (numpy.ndarray): retorna los pesos w_k para `P_N (x)`
 <span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">gaussxw</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">gaussxw</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Retorna los puntos de muestro x_k y sus respectivos pesos w_k para el polinomio de Legendre de orden N en el intervalo [-1, 1]</span>
 
 <span class="sd">    Examples:</span>
@@ -507,10 +501,7 @@ w (numpy.ndarray): retorna los pesos w_k para `P_N (x)`
 <span class="sd">        N (int): Argumento unico. Indica el orden del Polinomio de Legendre.</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">          (tuple): tupla con dos `numpy.ndarray`: x y w</span>
-<span class="sd">        x (numpy.ndarray): retorna los puntos de muestro x_k para `P_N (x)`</span>
-<span class="sd">        w (numpy.ndarray): retorna los pesos w_k para `P_N (x)`</span>
-
+<span class="sd">          (tuple): Tupla con dos `numpy.ndarray`: x(puntos d muestreo x_k) y w (pesos w_k)</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
@@ -562,7 +553,7 @@ w (numpy.ndarray): retorna los pesos w_k para `P_N (x)`
             </td>
             <td>
               <div class="doc-md-description">
-                <p>limite inferior de interalo de interes</p>
+                <p>Limite inferior de interalo de interes</p>
               </div>
             </td>
             <td>
@@ -578,7 +569,7 @@ w (numpy.ndarray): retorna los pesos w_k para `P_N (x)`
             </td>
             <td>
               <div class="doc-md-description">
-                <p>limite superior del intervalo de interes</p>
+                <p>Limite superior del intervalo de interes</p>
               </div>
             </td>
             <td>
@@ -594,7 +585,7 @@ w (numpy.ndarray): retorna los pesos w_k para `P_N (x)`
             </td>
             <td>
               <div class="doc-md-description">
-                <p>valores de muestros x_k</p>
+                <p>Valores de muestros x_k</p>
               </div>
             </td>
             <td>
@@ -610,7 +601,7 @@ w (numpy.ndarray): retorna los pesos w_k para `P_N (x)`
             </td>
             <td>
               <div class="doc-md-description">
-                <p>pesos w_k para los x_k</p>
+                <p>Pesos w_k para los x_k</p>
               </div>
             </td>
             <td>
@@ -636,7 +627,7 @@ w (numpy.ndarray): retorna los pesos w_k para `P_N (x)`
             </td>
             <td>
               <div class="doc-md-description">
-                <p>contiene los <code>numpy.ndarray</code> x y w, que a su vez contienes los  valores de x_k y w_k escalados en el intervalo de interes</p>
+                <p>Contiene los <code>numpy.ndarray</code> x y w, que a su vez contienes los  valores de x_k y w_k escalados en el intervalo de interes</p>
               </div>
             </td>
           </tr>
@@ -646,7 +637,10 @@ w (numpy.ndarray): retorna los pesos w_k para `P_N (x)`
 
             <details class="quote">
               <summary>Source code in <code>GaussCuadrature/cuadrature.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">30</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
 <span class="normal">31</span>
 <span class="normal">32</span>
 <span class="normal">33</span>
@@ -659,10 +653,7 @@ w (numpy.ndarray): retorna los pesos w_k para `P_N (x)`
 <span class="normal">40</span>
 <span class="normal">41</span>
 <span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">gaussxwab</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
+<span class="normal">43</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">gaussxwab</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Escala los valores de muestro y sus pesos del intervalo [-1, 1] al intervalo de interes</span>
 
 <span class="sd">    Examples:</span>
@@ -670,13 +661,13 @@ w (numpy.ndarray): retorna los pesos w_k para `P_N (x)`
 <span class="sd">        (array([1.42264973, 2.57735027]), array([1., 1.]))</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        a (float): limite inferior de interalo de interes</span>
-<span class="sd">        b (float): limite superior del intervalo de interes</span>
-<span class="sd">        x (array): valores de muestros x_k</span>
-<span class="sd">        w (array): pesos w_k para los x_k</span>
+<span class="sd">        a (float): Limite inferior de interalo de interes</span>
+<span class="sd">        b (float): Limite superior del intervalo de interes</span>
+<span class="sd">        x (array): Valores de muestros x_k</span>
+<span class="sd">        w (array): Pesos w_k para los x_k</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">          (tuple): contiene los `numpy.ndarray` x y w, que a su vez contienes los  valores de x_k y w_k escalados en el intervalo de interes</span>
+<span class="sd">          (tuple): Contiene los `numpy.ndarray` x y w, que a su vez contienes los  valores de x_k y w_k escalados en el intervalo de interes</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span> <span class="o">+</span> <span class="n">a</span><span class="p">),</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span> <span class="o">*</span> <span class="n">w</span>
 </code></pre></div></td></tr></table></div>
