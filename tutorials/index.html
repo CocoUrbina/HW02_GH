@@ -229,6 +229,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Ejemplo de uso
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -240,6 +253,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduccion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-1-puntos-de-muestreo-x_k-y-pesos-w_k-para-n-2-en-el-intervalo-1-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 1: Puntos de muestreo \( x_k \) y pesos \( w_k \) para \( N = 2\) en el intervalo \( [-1, 1]\).
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-2-escalado-al-intervalo-de-interes-1-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 2: Escalado al intervalo de interes \( [1, 3]\)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -265,6 +324,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduccion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-1-puntos-de-muestreo-x_k-y-pesos-w_k-para-n-2-en-el-intervalo-1-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 1: Puntos de muestreo \( x_k \) y pesos \( w_k \) para \( N = 2\) en el intervalo \( [-1, 1]\).
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paso-2-escalado-al-intervalo-de-interes-1-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 2: Escalado al intervalo de interes \( [1, 3]\)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -280,9 +374,17 @@
 
 
 <h1 id="ejemplo-de-uso">Ejemplo de uso</h1>
-<p>Se aproxima el valor de la integral</p>
-<div class="arithmatex">\[ \int_1 ^b dx \left[ x^6 - x^2\sin(2x)   \right] \]</div>
-<p>con el polinomio de Legendre de orden 2, <span class="arithmatex">\( P_2(x) \)</span></p>
+<h2 id="introduccion">Introduccion</h2>
+<p>Se aproxima el valor de la integral <span class="arithmatex">\( \int_1 ^3 dx \left[ x^6 - x^2\sin(2x)   \right] \)</span> con el polinomio de Legendre de orden 2, <span class="arithmatex">\( P_2(x) \)</span></p>
+<h2 id="paso-1-puntos-de-muestreo-x_k-y-pesos-w_k-para-n-2-en-el-intervalo-1-1">Paso 1: Puntos de muestreo <span class="arithmatex">\( x_k  \)</span> y pesos <span class="arithmatex">\( w_k \)</span> para <span class="arithmatex">\( N = 2\)</span> en el intervalo <span class="arithmatex">\( [-1, 1]\)</span>.</h2>
+<pre><code class="language-python">n2 = gaussxw(2)
+print(n2)
+(array([-0.57735027,  0.57735027]), array([1., 1.]))
+</code></pre>
+<h2 id="paso-2-escalado-al-intervalo-de-interes-1-3">Paso 2: Escalado al intervalo de interes <span class="arithmatex">\( [1, 3]\)</span></h2>
+<pre><code class="language-python">gaussxwab(1.0, 3.0, n2[0], n2[1])
+(array([1.42264973, 2.57735027]), array([1., 1.]))
+</code></pre>
 
 
 
